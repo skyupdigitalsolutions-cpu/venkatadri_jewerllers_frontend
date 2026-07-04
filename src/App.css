@@ -1,0 +1,367 @@
+/* ─── COUNTER STYLING ──────────────────────────────────────────────────────── */
+
+.counter {
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.counter:hover {
+  border-color: var(--accent-border);
+  background: rgba(170, 59, 255, 0.15);
+}
+
+.counter:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  .counter {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-bottom: 16px;
+  }
+}
+
+/* ─── HERO SECTION - RESPONSIVE ANIMATIONS ─────────────────────────────── */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .base,
+.hero .framework,
+.hero .vite {
+  margin: 0 auto;
+  display: block;
+}
+
+.hero .base {
+  width: clamp(100px, 30vw, 170px);
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+}
+
+.hero .framework,
+.hero .vite {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero .framework {
+  z-index: 1;
+  top: 20px;
+  height: clamp(20px, 5vw, 28px);
+  transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg) scale(1.4);
+}
+
+.hero .vite {
+  z-index: 0;
+  top: 80px;
+  height: clamp(18px, 4vw, 26px);
+  transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8);
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 200px;
+    padding: 12px;
+  }
+
+  .hero .framework {
+    top: 12px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg) scale(1);
+  }
+
+  .hero .vite {
+    top: 60px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.6);
+  }
+}
+
+/* ─── CENTER SECTION ───────────────────────────────────────────────────────── */
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 4vw, 25px);
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+  padding: var(--spacing-lg);
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  #center {
+    padding: 16px 12px;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  #center {
+    padding: 32px 20px 24px;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #center {
+    padding: 40px 24px;
+    gap: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #center {
+    padding: 48px 32px;
+    gap: 28px;
+  }
+}
+
+/* ─── NEXT STEPS SECTION ───────────────────────────────────────────────────── */
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+  width: 100%;
+  flex-direction: column;
+}
+
+#next-steps > div {
+  flex: 1 1 0;
+  padding: var(--spacing-2xl);
+  border-bottom: 1px solid var(--border);
+}
+
+#next-steps > div:last-child {
+  border-bottom: none;
+}
+
+#next-steps .icon {
+  margin-bottom: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  #next-steps > div {
+    padding: 16px 12px;
+  }
+
+  #next-steps .icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 640px) {
+  #next-steps {
+    flex-direction: row;
+  }
+
+  #next-steps > div {
+    padding: 24px 20px;
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+  }
+
+  #next-steps > div:last-child {
+    border-right: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #next-steps > div {
+    padding: 32px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #next-steps {
+    text-align: left;
+  }
+
+  #next-steps > div {
+    padding: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  #next-steps > div {
+    padding: 40px 36px;
+  }
+}
+
+/* ─── DOCS SECTION ────────────────────────────────────────────────────────── */
+
+#docs {
+  border-right: none;
+
+  @media (min-width: 640px) {
+    border-right: 1px solid var(--border);
+  }
+}
+
+/* ─── NEXT STEPS LINKS ───────────────────────────────────────────────────── */
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: clamp(6px, 3vw, 10px);
+  margin: clamp(16px, 4vw, 32px) 0 0;
+  flex-wrap: wrap;
+}
+
+#next-steps .logo {
+  height: 18px;
+  width: auto;
+}
+
+#next-steps a {
+  color: var(--text-h);
+  font-size: 14px;
+  border-radius: 6px;
+  background: var(--social-bg);
+  display: inline-flex;
+  padding: 8px 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 40px;
+  white-space: nowrap;
+}
+
+#next-steps a:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+  background: var(--accent-bg);
+}
+
+#next-steps a:active {
+  transform: translateY(0);
+}
+
+#next-steps .button-icon {
+  height: 18px;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  #next-steps ul {
+    gap: 6px;
+    margin: 16px 0 0;
+    justify-content: flex-start;
+  }
+
+  #next-steps li {
+    flex: 0 1 auto;
+  }
+
+  #next-steps a {
+    font-size: 12px;
+    padding: 6px 10px;
+    min-height: 36px;
+  }
+
+  #next-steps .button-icon {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  #next-steps ul {
+    justify-content: center;
+  }
+
+  #next-steps li {
+    flex: 1 1 calc(50% - var(--spacing-md));
+  }
+
+  #next-steps a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  #next-steps ul {
+    margin: 32px 0 0;
+    gap: 8px;
+  }
+
+  #next-steps a {
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+}
+
+/* ─── SPACER ───────────────────────────────────────────────────────────────── */
+
+#spacer {
+  height: clamp(40px, 10vh, 88px);
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+
+/* ─── TICKS DECORATIVE ELEMENT ────────────────────────────────────────────── */
+
+.ticks {
+  position: relative;
+  width: 100%;
+  height: 12px;
+}
+
+.ticks::before,
+.ticks::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border: 5px solid transparent;
+}
+
+.ticks::before {
+  left: 0;
+  border-left-color: var(--border);
+}
+
+.ticks::after {
+  right: 0;
+  border-right-color: var(--border);
+}
+
+@media (max-width: 480px) {
+  .ticks::before,
+  .ticks::after {
+    border-width: 4px;
+  }
+}
