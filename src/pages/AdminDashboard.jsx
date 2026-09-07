@@ -11,7 +11,6 @@ const getFileUrl = (filePath) => {
   return `${ADMIN_API}/${clean}`;
 };
 
-// ─── Data (legacy constants) ──────────────────────────────────────────────
 const SCHEMES = [];
 const PAYMENTS = [];
 const GOLD_HISTORY = [];
