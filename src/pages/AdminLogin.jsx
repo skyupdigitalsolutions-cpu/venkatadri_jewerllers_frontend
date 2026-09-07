@@ -93,7 +93,6 @@ const GLOBAL_CSS = `
   @media (min-width: 768px) {
     .al-page { flex-direction: row; }
   }
-
   /* ─── Left Sidebar ─────────────────────────────────────────────── */
   .al-left {
     order: 2;
