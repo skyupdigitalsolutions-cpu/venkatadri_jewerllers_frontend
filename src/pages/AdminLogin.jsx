@@ -943,7 +943,7 @@ export default function AdminLogin({ onLogin, onSignup }) {
             </div>
 
             <div className="al-footer-note">
-              🔐 Secure login · Powered by SkyUp Digital Solution
+               Secure login · Powered by SkyUp Digital Solution
             </div>
 
           </div>
